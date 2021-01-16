@@ -4,7 +4,7 @@ To use knowledge attained from Machine learning and neural networks creating a b
 ## Purpose
 The company would like to know if the charity organization if funded is actually successful with the charity work.
 
-## resources
+## Resources
 
 ## Results
 
