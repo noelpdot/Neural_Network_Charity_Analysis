@@ -24,6 +24,7 @@ Desiring to implement machine learning and neural network to optimize the model 
 2. The rest of the data is considered as the features.
 All data was used in order to have sufficient input data available
 3. columns that I felt had no relation to the data are EIN, NAME and ORGANIZATION.
+    - But when optimizing the model, i did decide to keep the Organization feature to see if there were any major changes.
 
 ### B. Clean, Compile, train and Evaluate the model
 
@@ -36,19 +37,17 @@ All data was used in order to have sufficient input data available
     - Epochs started small and increased them to see any changes. none made any improvement.
     - Additional feature was removed to see possible outcome.
 
-| Model           | Inputs | Hidden Layers | Neurons       | Activation  | Optimizer | Epochs | Accuracy % |
-| :-------------: | :----: | :-----------: | :-----------: | :---------: | :-------: | :----: | :--------: |
-| Original        | 49     | 2             | 20 10         | relu        | adam      | 50     | 72.61      |
-| Optimize 1      | 50     | 3             | 30 25 10      | relu        | adam      | 100    | 72.32      |
-| Optimize 2      | 43     | 3             | 80 40 20      | relu        | adam      | 200    | 72.50      |
-| Optimize 3      | 43     | 3             | 150 75 40     | relu, swish | adam      | 200    | 72.50      |
-| Optimization    | 45     | 3             | 90            | swish       | adam      | 150    | 72.18      |
-| optimization 01 | 50     | 7             | 150 150 80    |             |           |        |            |
-|                 |        |               | 70 70 35 35   | relu        | adam      | 100    | 72.67      |
-| optimization 02 | 71     | 7             | 210 105 50 20 |             |           |        |            |
-|                 |        |               | 10 35 35      | relu        | adam      | 100    | 72.71           |
-| Random Forest   | -      | -             | -             | -           | -         | -      | 70.5       |
-| SVM             | -      | -             | -             | -           | -         | -      | 72.10      |
+| Model           | Inputs | Hidden Layers | Neurons                | Activation  | Optimizer | Epochs | Accuracy % |
+| :-------------: | :----: | :-----------: | :--------------------: | :---------: | :-------: | :----: | :--------: |
+| Original        | 49     | 2             | 20 10                  | relu        | adam      | 50     | 72.61      |
+| Optimize 1      | 50     | 3             | 30 25 10               | relu        | adam      | 100    | 72.32      |
+| Optimize 2      | 43     | 3             | 80 40 20               | relu        | adam      | 200    | 72.50      |
+| Optimize 3      | 43     | 3             | 150 75 40              | relu, swish | adam      | 200    | 72.50      |
+| Optimization    | 45     | 3             | 90                     | swish       | adam      | 150    | 72.18      |
+| optimization 01 | 50     | 7             | 150 150 80 70 70 35 35 | relu        | adam      | 100    | 72.67      |
+| optimization 02 | 71     | 7             | 210 105 50 20 10 35 35 | relu        | adam      | 100    | 72.71      |
+| Random Forest   | -      | -             | -                      | -           | -         | -      | 70.5       |
+| SVM             | -      | -             | -                      | -           | -         | -      | 72.10      |
 
 
 ![Accuracy_Score](resources/original.png)
